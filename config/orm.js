@@ -16,12 +16,12 @@ var orm = {
 
     },
 
-    insertOne: function (queryString, cb) {
+    insertOne: function (cols, vals, cb) {
         var queryString = "INSERT INTO ?? VALUES ?";
 
         console.log(queryString);
 
-        connection.query(queryString, function (err, result) {
+        connection.query(cols, vals, function (err, result) {
             if (err) {
                 console.log(err);
             }
@@ -30,12 +30,12 @@ var orm = {
 
     },
 
-    updateOne: function (queryString, cb) {
+    updateOne: function (objColVals, condition, cb) {
         var queryString = "UPDATE ?? SET ? WHERE ?? = ?";
 
         console.log(queryString);
 
-        connection.query(queryString, function (err, result) {
+        connection.query(objColVals, condition, function (err, result) {
             if (err) {
                 console.log(err);
             }
