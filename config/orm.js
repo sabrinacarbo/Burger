@@ -3,7 +3,7 @@ var connection = require("./connection");
 var orm = {
 
     selectAll: function (queryString, cb) {
-        var queryString = "SELECT * FROM ??";
+        var queryString = "SELECT * FROM burgers";
 
         console.log(queryString);
 
@@ -17,7 +17,7 @@ var orm = {
     },
 
     insertOne: function (cols, vals, cb) {
-        var queryString = "INSERT INTO ?? VALUES ?";
+        var queryString = "INSERT INTO burgers VALUES ?";
 
         console.log(queryString);
 
@@ -31,7 +31,7 @@ var orm = {
     },
 
     updateOne: function (objColVals, condition, cb) {
-        var queryString = "UPDATE ?? SET ? WHERE ?? = ?";
+        var queryString = "UPDATE devoured SET true WHERE id = ?";
 
         console.log(queryString);
 
