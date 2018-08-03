@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque
+}
+
+.box{
+    margin: auto;
+    padding: 50px;
+    width: 600px;
+}
+
+h1{
+    text-align: center;
+}
+
+.image{
+    margin: auto;
+    width: 200px;
+}
+
+.newBurger{
+    margin: auto;
+    float: left;
+    left: 30%;
+}
+
+.devBurger{
+    margin: auto;
+    float: left;
+    left: 30%;
+} 
+
+.form{
+    clear: both;
+    text-align: center;
+}
+
+button{
+    margin: auto;
+}

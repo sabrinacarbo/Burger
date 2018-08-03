@@ -22,19 +22,25 @@ $(function() {
       );
     });
   
-    // $(".delete-cat").on("click", function(event) {
-    //   var id = $(this).data("id");
+    $(".change-devoured").on("click", function(event) {
+      var id = $(this).data("id");
+      var devouredBurger = $(this).data("devoured");
   
-    //   // Send the DELETE request.
-    //   $.ajax("/api/cats/" + id, {
-    //     type: "DELETE"
-    //   }).then(
-    //     function() {
-    //       console.log("deleted cat", id);
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
+      var burgerState = {
+        devoured: true
+      };
+  
+      // Send the PUT request.
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: burgerState
+      }).then(
+        function() {
+          console.log("changed sleep to", devouredBurger);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
   });
   
